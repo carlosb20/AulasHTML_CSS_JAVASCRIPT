@@ -26,10 +26,67 @@ body{
     width: 500px;
     height: 400px;
     margin: 5px;
+  
     background-color: aquamarine;
+    border-radius: 5px;
 }
 
 
+
+.pesq ul{
+
+    
+    list-style: none;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.pesq h1{
+
+    font-size: 45px;
+    text-align: center;
+}
+
+.pesq .btn{
+
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    
+    transition: 0,3s;
+}
+
+.pesq .btn:hover{
+    background-color: brown;
+    transition:background-color 2s ;
+    transform: scale(0.9);
+    opacity: 1;
+}
+
+#input{
+
+    display: grid;
+    width: 50px;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.pesq #for_{
+
+    width: 500px;
+    height: 200px;
+    display: grid;
+    gap: 30px;
+    justify-items: center;
+    align-content: center;
+    
+
+}
 
 
 
