@@ -52,34 +52,45 @@ function gera_calculos(){
 
 gera_calculos()
 
-function iniciar(){
-    document.querySelector("#for_").addEventListener('submit',(el)=>{
-        el.preventDefault()
 
-        const sp1 = document.querySelector("#span1")
-        const sp2 = document.querySelector("#span2")
+document.querySelector("#for_").addEventListener('submit',(el)=>{
+el.preventDefault()
 
-        const getinput = document.querySelector("#input")
-        var num_i = parseInt(getinput.value)
+const sp1 = document.querySelector("#span1")
+const sp2 = document.querySelector("#span2")
+
+const getinput = document.querySelector("#input")
+
+if(!(getinput.value == '')){
+
+    var num_i = parseInt(getinput.value)
+
+    console.log(valor)
+    console.log(getinput.value)
+
+
+    if(num_i == valor){
+
+        sp1.innerHTML = ++cont1
         
+        
+    }else{
 
-        if(num_i == valor){
+        sp2.innerHTML = ++cont2
+        
+        
+    }
 
-            sp1.innerHTML = ++cont1
-            
-            
-        }else{
-
-            sp2.innerHTML = ++cont2
-            
-            
-        }
-        gera_calculos()
         document.querySelector("#input").value = ''
+        gera_calculos()
 
-    })
-
+}else{
+    alert('digita um numero')
 }
+    
+})
+
+
 
 
 
