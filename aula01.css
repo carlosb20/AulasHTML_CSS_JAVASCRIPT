@@ -43,5 +43,58 @@
     background-color: rgba(43, 43, 146, 0.744);
 }
 
+.conte{
+
+    width: 100%;
+    height: 300px;
+    justify-items: center;
+    background: linear-gradient(10deg,yellow,pink,gray);
+}
+
+.rio{
+
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgba(25, 25, 177, 0.638);
+    border:1px solid red ;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.bt{
+
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(10deg,yellow,pink,gray);
+
+}
+
+.btn{
+
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    border: 2px solid blue;
+    background-color: rgb(77, 77, 221);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-shadow: 2px 3px 3px red;
+}
+
+
+
+
+
+
 
 

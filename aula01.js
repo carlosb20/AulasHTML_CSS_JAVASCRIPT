@@ -27,7 +27,24 @@ div3.innerHTML = 'createElement'
 val.appendChild(div3)
 
 
-console.log(div3)
+const btn = document.querySelector(".btn")
+
+btn.addEventListener("click",(el)=>{
+    const todosradio = [...document.querySelectorAll("input[type=radio]")]
+    const selecionado = todosradio.filter((ele)=>{
+
+    const sa = ele.parentNode.parentNode.textContent
+
+        console.log(sa)
+
+       return ele
+    })
+    
+    red = selecionado[0]
+
+    
+})
+
 
 
 
