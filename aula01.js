@@ -29,21 +29,32 @@ val.appendChild(div3)
 
 const btn = document.querySelector(".btn")
 
-btn.addEventListener("click",(el)=>{
+btn.addEventListener("click",()=>{
+
     const todosradio = [...document.querySelectorAll("input[type=radio]")]
-    const selecionado = todosradio.filter((ele)=>{
+    let selecionado = todosradio.filter((ele)=>{
 
-    const sa = ele.parentNode.parentNode.textContent
+        return ele.checked
 
-        console.log(sa)
-
-       return ele
     })
-    
-    red = selecionado[0]
-
+    selecionado = selecionado[0]
+    const sele = selecionado.parentNode.textContent
+    alert('liguagem selecionado : '+ sele)
+    console.log(sele)
     
 })
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
