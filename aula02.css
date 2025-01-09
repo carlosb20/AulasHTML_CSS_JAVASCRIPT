@@ -1,0 +1,37 @@
+
+
+
+body{
+
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+}
+
+.contaiener{
+
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(120deg,rgba(199, 22, 22, 0.716),rgba(191, 191, 44, 0.667),rgb(234, 7, 49));
+}
+
+.com{
+
+    width: 50px;
+    height: 50px;
+    position:relative;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
