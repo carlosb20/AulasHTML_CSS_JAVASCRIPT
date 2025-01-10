@@ -23,9 +23,46 @@ function mover(){
         num = 0
     }
 
-
-
 setTimeout(mover,30)
 }
 
 mover()
+
+
+let divq = document.querySelector(".divq")
+var cont = 0;
+
+
+
+console.log(cont)
+
+function lefts(){
+
+    if(cont < 450){
+    const el = cont+=5
+    const str = el.toString()
+    
+    divq.style.left = str+'px'
+    console.log(cont)
+    }
+}
+
+function rights(){
+
+    const e = cont-=5
+    const str = e.toString()
+    divq.style.left = str+'px'
+    console.log(str)
+
+}
+
+
+
+
+
+
+
+
+
+
+
