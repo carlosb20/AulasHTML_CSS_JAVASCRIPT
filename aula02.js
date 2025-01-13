@@ -47,6 +47,34 @@ val.map((le)=>{
 
 
 
+const myObserver = new IntersectionObserver((el)=>{
+
+    el.forEach((entry)=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add('show')
+        }else{
+            entry.target.classList.remove('show')
+        }
+    })
+
+})
+
+const even = document.querySelectorAll('.hidden')
+
+even.forEach((elem)=> myObserver.observe(elem))
+
+
+
+
+
+
+
+
+
+
+
 
 
 
