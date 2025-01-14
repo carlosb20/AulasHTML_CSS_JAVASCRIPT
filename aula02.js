@@ -44,9 +44,6 @@ val.map((le)=>{
     
 
 
-
-
-
 const myObserver = new IntersectionObserver((el)=>{
 
     el.forEach((entry)=>{

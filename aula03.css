@@ -1,0 +1,77 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+
+body{
+
+    background-color: gray;
+}
+
+.caixa{
+
+    width: 100%;
+    background: linear-gradient(120deg,pink,blue,orange);
+    
+}
+
+.cont{
+    width: 400px;
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+   
+}
+
+#input{
+
+    width: 350px;
+    height: 30px;
+    font-size: 20px;
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    box-shadow:1px 0px 7px #000000;;
+}
+
+.cont label{
+
+    font-size: 20px;
+    margin: 2px;
+}
+
+
+
+.cont button{
+
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    margin-left: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    
+
+}
+
+
+
+.front {
+    will-change: transform;
+    transition: transform 250ms;
+  }
+
+.evento:hover .front {
+    transform: translateY(-6px);
+  }
+
+.evento:active  {
+    transform: translateY(-2px);
+  }
+  
+
+
