@@ -54,23 +54,25 @@ body{
     border-radius: 5px;
     cursor: pointer;
     border: 0;
+    font-size: 20px;
+    box-shadow: 0 9px #999;
+    background-color: #04aa6d;
+}   
+
+
+
+
+
+.cont button:hover{
+    background-color: #3e8e41;
     
-
-}
-
-
-
-.front {
-    will-change: transform;
-    transition: transform 250ms;
   }
 
-.evento:hover .front {
-    transform: translateY(-6px);
-  }
+.cont button:active{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 
-.evento:active  {
-    transform: translateY(-2px);
   }
   
 
