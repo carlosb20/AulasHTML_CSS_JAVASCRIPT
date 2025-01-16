@@ -64,6 +64,11 @@ body{
 }   
 
 
+.destaque{
+
+    border: 1px solid red;
+    background:linear-gradient(120deg,yellow,green,orange);
+}
 
 
 
@@ -132,6 +137,38 @@ body{
    
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
