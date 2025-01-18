@@ -1,25 +1,21 @@
 
 
-const inputs = [...document.querySelectorAll("input[type=text]")]
 const classdivs = [...document.querySelectorAll(".divs")]
+
+const nomep = document.querySelector("#inputnome")
+const cpf = document.querySelector("#inputcpf")
 
 const btn = document.querySelector("#btn")
 
 let dados = []
 
 
-
-
 const pega=()=>{
-    inputs.forEach((el)=>
-      dados.push(el.value)    
-)
-    inputs[0].focus()
-    inputs.forEach((ap)=>
-        ap.value = ''
-    )
+    dados.push([nomep.value,cpf.value])
+    nomep.value = ''
+    cpf.value = ''
+    console.log(dados)
 }
-
 
 const mover=()=>{
     classdivs.map((dele)=>{
@@ -42,7 +38,6 @@ classdivs.map((item)=>{
 })
 
 console.log(dados)
-
 
 
 
