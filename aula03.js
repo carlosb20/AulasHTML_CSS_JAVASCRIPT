@@ -12,7 +12,7 @@ let dados = []
 
 const pega=()=>{
     inputs.forEach((el)=>
-        dados.push(el.value)    
+      dados.push(el.value)    
 )
     inputs[0].focus()
     inputs.forEach((ap)=>
