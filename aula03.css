@@ -135,7 +135,12 @@ body{
     
 }
 
+.caixa2{
 
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(120deg, #009fffa6, #fff10042, #c60c57c4);
+}
 
 
 
