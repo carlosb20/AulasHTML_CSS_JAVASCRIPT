@@ -142,8 +142,65 @@ body{
     background: linear-gradient(120deg, #009fffa6, #fff10042, #c60c57c4);
 }
 
+.caixa2 h1{
 
+    text-align: center;
+    padding: 10px;
+}
 
+.pes{
+
+    width: 500px;
+    height: 250px;
+    background-color: #3e8e41;
+
+    
+}
+
+.contflex{
+
+    display: flex;
+    justify-content: space-around;
+    gap: -10px;
+}
+
+.sem{
+    width: 100px;
+    height: 25px;  
+    outline: none; 
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.cent{
+
+    width: 500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#00ffff4a;
+    padding-top: 10px;
+}
+
+.cent button{
+    width: 100px;
+    height: 30px;
+    margin: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    font-size:20px;
+    background-color: blue;
+    color: whitesmoke;
+    box-shadow:1px 2px 0px 3px red;
+}
+
+.cent button:active{
+    transform: translateY(5px);
+    box-shadow:1px 2px 0px 0px red;
+}
 
 
 

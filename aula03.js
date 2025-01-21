@@ -56,7 +56,20 @@ classcont2.map((eles,i)=>{
 })
 
 
+url = "https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL"
 
+
+async function cotacao(){
+
+    const h2 = document.querySelector("#h2")
+    const inputpesquisa = document.querySelector("#pes")
+
+
+    const respo = await fetch(url)
+    const resposta = await respo.json()
+    console.log(resposta)
+    console.log(inputpesquisa.value)
+}
 
 
 
