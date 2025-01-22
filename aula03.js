@@ -56,19 +56,36 @@ classcont2.map((eles,i)=>{
 })
 
 
-url = "https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL"
+//url = "https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL"
+
 
 
 async function cotacao(){
 
     const h2 = document.querySelector("#h2")
     const inputpesquisa = document.querySelector("#pes")
+    const pval = document.querySelector("#pval")
+    const rodape = document.querySelector(".rodape")
 
+    
+url2 =  `https://economia.awesomeapi.com.br/last/${inputpesquisa.value}-BRL`
 
-    const respo = await fetch(url)
+    const respo = await fetch(url2)
     const resposta = await respo.json()
-    console.log(resposta)
-    console.log(inputpesquisa.value)
+    const str = inputpesquisa.value.toUpperCase()+"BRL"
+
+    if(respo.status == 200){
+        rodape.style.opacity = '1'
+        //console.log(resposta)
+        h2.innerHTML = `Moeda ( ${resposta[str].name})`
+        pval.innerHTML = `Valor da Moeda ${resposta[str].bid}`
+
+    }else{
+
+        alert('ERRO ! Moeda não encontrada')
+    }
+    inputpesquisa.value = ''
+    inputpesquisa.focus()
 }
 
 

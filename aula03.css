@@ -194,15 +194,20 @@ body{
     font-size:20px;
     background-color: blue;
     color: whitesmoke;
-    box-shadow:1px 2px 0px 3px red;
+    box-shadow:1px 2px 0px 3px #ff000033;
 }
 
 .cent button:active{
     transform: translateY(5px);
-    box-shadow:1px 2px 0px 0px red;
+    box-shadow:1px 2px 0px 3px #00ffbf54;
 }
 
-
+.rodape{
+    width: 400px;
+    padding: 10px;
+    opacity: 0;
+    background-color: #3e8e41;
+}
 
 
 
