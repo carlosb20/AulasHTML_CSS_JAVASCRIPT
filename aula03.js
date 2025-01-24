@@ -93,9 +93,12 @@ url2 =  `https://economia.awesomeapi.com.br/last/${inputpesquisa.value}-BRL`
 //https://api.themoviedb.org/3/movie/550?api_key=6d9a1e25dbcb17a0e630bab33da79bce
 
 var divfilmes = document.querySelector(".filmes")
-/*
+
+const  key = '6d9a1e25dbcb17a0e630bab33da79bce'
+const liguagem = 'pt-BR'
+
 async function App_filmes(){
-    const urlf = 'https://api.themoviedb.org/3/movie/550?api_key=6d9a1e25dbcb17a0e630bab33da79bce'
+    const urlf = `https://api.themoviedb.org/3/movie/550?api_key=${key}`
     const getresponse = await  fetch(urlf)
     const getok = await getresponse.json()
 
@@ -103,12 +106,20 @@ async function App_filmes(){
 
     const arrayfilmes = getok.production_companies
 
+    
+
     arrayfilmes.map((le,i)=>{
         const crediv = document.createElement('div')
         crediv.setAttribute('id','imgA')
+        crediv.style.height = '800px'
 
         console.log(le)
-        
+
+       // console.log(le.id)
+
+        crediv.innerHTML =`<p> ${le.id} </p>
+                <img src= https://image.tmdb.org/t/p/original${le.logo_path} width=180px height=180px/>
+        `
 
         divfilmes.appendChild(crediv)
     })  
@@ -116,21 +127,8 @@ async function App_filmes(){
 }
 
 App_filmes()
-*/
-
-const cao = 'imagem'
 
 
-async function App_filmes(){
-    const urlf = `https://api.themoviedb.org/3/movie/550?api_key=6d9a1e25dbcb17a0e630bab33da79bce`
-    //const getresponse = await  fetch(urlf)
-    //const getok = await getresponse.json()
-
-    console.log(urlf)
-
-}
-
-App_filmes()
 
 
 
