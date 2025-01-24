@@ -90,5 +90,66 @@ url2 =  `https://economia.awesomeapi.com.br/last/${inputpesquisa.value}-BRL`
 
 
 
+//https://api.themoviedb.org/3/movie/550?api_key=6d9a1e25dbcb17a0e630bab33da79bce
+
+var divfilmes = document.querySelector(".filmes")
+/*
+async function App_filmes(){
+    const urlf = 'https://api.themoviedb.org/3/movie/550?api_key=6d9a1e25dbcb17a0e630bab33da79bce'
+    const getresponse = await  fetch(urlf)
+    const getok = await getresponse.json()
+
+    //console.log(getok.production_companies)
+
+    const arrayfilmes = getok.production_companies
+
+    arrayfilmes.map((le,i)=>{
+        const crediv = document.createElement('div')
+        crediv.setAttribute('id','imgA')
+
+        console.log(le)
+        
+
+        divfilmes.appendChild(crediv)
+    })  
+   
+}
+
+App_filmes()
+*/
+
+const cao = 'imagem'
+
+
+async function App_filmes(){
+    const urlf = `https://api.themoviedb.org/3/movie/550?api_key=6d9a1e25dbcb17a0e630bab33da79bce`
+    //const getresponse = await  fetch(urlf)
+    //const getok = await getresponse.json()
+
+    console.log(urlf)
+
+}
+
+App_filmes()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
