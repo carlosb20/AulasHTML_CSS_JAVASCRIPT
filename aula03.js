@@ -97,6 +97,9 @@ var divfilmes = document.querySelector(".filmes")
 const  key = '6d9a1e25dbcb17a0e630bab33da79bce'
 const liguagem = 'pt-BR'
 
+//https://api.themoviedb.org/3/discover/movie
+
+/*
 async function App_filmes(){
     const urlf = `https://api.themoviedb.org/3/movie/550?api_key=${key}`
     const getresponse = await  fetch(urlf)
@@ -111,14 +114,15 @@ async function App_filmes(){
     arrayfilmes.map((le,i)=>{
         const crediv = document.createElement('div')
         crediv.setAttribute('id','imgA')
-        crediv.style.height = '800px'
+        
 
         console.log(le)
 
        // console.log(le.id)
 
-        crediv.innerHTML =`<p> ${le.id} </p>
-                <img src= https://image.tmdb.org/t/p/original${le.logo_path} width=180px height=180px/>
+        crediv.innerHTML =` <img src= https://image.tmdb.org/t/p/original${le.logo_path} width=150px height=150px/>
+                            <p>id: ${le.id} </p>
+                            <p> Filme: ${le.name}</p>
         `
 
         divfilmes.appendChild(crediv)
@@ -127,18 +131,56 @@ async function App_filmes(){
 }
 
 App_filmes()
+*/
 
 
+async function App_filmes(){
+    const urlf = `https://api.themoviedb.org/3/discover/movie?api_key=${key}`
+    const getresponse = await  fetch(urlf)
+    const getok = await getresponse.json()
+
+    console.log(getok)
+
+}
 
 
+//-------------------------------------------------------------------------------------------
+
+const url =`https://api.themoviedb.org/3/discover/movie?api_key=${key}`
+const options = {
+  method: 'GET',
+  language: 'pt-BR',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2ZDlhMWUyNWRiY2IxN2EwZTYzMGJhYjMzZGE3OWJjZSIsIm5iZiI6MTczNzU4ODk4NS42ODgsInN1YiI6IjY3OTE4MGY5YTdmMjcxMzBiYjI4YzllMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6kqXgHHYwYI-J2C5ybk5jGis_s8wUZkKaF8Ng2okfyU'
+  }
+};
+
+async function Filmes(){
+    const cime =  await fetch(url, options)
+    const res = await cime.json()
+
+   //console.log(res.results)
+    const filmes = res.results
+    
+    filmes.map((el)=>{
+        const divf = document.createElement('div')
+        divf.setAttribute('class','imgfilmes')
+        
+        divf.innerHTML = `<img src= https://image.tmdb.org/t/p/original${el.poster_path} width=150px height=150px/>
+                        <p> ${el.title} </p>
+                        <p>${el.original_language}</p> 
+
+        `
+    
+        console.log(el)
+        divfilmes.appendChild(divf)
+    })
 
 
+}
 
-
-
-
-
-
+Filmes()
 
 
 
