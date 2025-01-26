@@ -160,7 +160,7 @@ async function Filmes(){
     const cime =  await fetch(url, options)
     const res = await cime.json()
 
-   console.log(options)
+   console.log(res)
     const filmes = res.results
     
     filmes.map((el)=>{
