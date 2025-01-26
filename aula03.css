@@ -139,6 +139,7 @@ body{
 
     width: 100%;
     height: 700px;
+    display:grid;
     background: linear-gradient(120deg, #009fffa6, #fff10042, #c60c57c4);
     
 }
@@ -215,9 +216,9 @@ body{
     width: 100%;
     height: 500px;
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    
     background-color: #0000004d;
 }  
 
@@ -226,8 +227,27 @@ body{
     width:'100%';
     height:'800px';
     padding: 20px;
-    
-    
-    
+   
 }
+
+
+.imgfilmes{
+
+    width: 180px;
+    justify-items: center;
+   
+}
+
+.imgfilmes img{
+
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.imgfilmes img:hover{
+
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 

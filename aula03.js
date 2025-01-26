@@ -160,7 +160,7 @@ async function Filmes(){
     const cime =  await fetch(url, options)
     const res = await cime.json()
 
-   //console.log(res.results)
+   console.log(options)
     const filmes = res.results
     
     filmes.map((el)=>{
@@ -173,7 +173,7 @@ async function Filmes(){
 
         `
     
-        console.log(el)
+        //console.log(el)
         divfilmes.appendChild(divf)
     })
 
