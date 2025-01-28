@@ -6,3 +6,13 @@ body{
 
     background-color: gray;
 }
+
+#sa{
+
+    width: 50px;
+}
+
+#sa:active{
+
+    width: 100px;
+}
