@@ -17,13 +17,3 @@ async function loadfilmes() {
 loadfilmes()
 
 
-const btn = document.querySelector("#sa") 
-
-
-btn.addEventListener("click",(el)=>{
-
-    console.log('ok',el)
-
-
-})
-
