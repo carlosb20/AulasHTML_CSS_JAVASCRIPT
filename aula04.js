@@ -31,25 +31,49 @@ filmes.then(function(va){
 })
 
 
-const cont = document.querySelector(".container")
+//const cont = document.querySelector(".container")
+const carro = document.querySelector(".carrossel")
 
 const carrosselImagem=()=>{
-
     filmes.then(function(elemnt){
+        num = 0
         elemnt.map((Imgslen=>{
-            const imgs = document.createElement('img')
-            imgs.setAttribute('id','foto')
-            //imgs.setAttribute('src',`https://image.tmdb.org/t/p/original${elemnt.poster_path}`)
+            num++
+            const contai = document.createElement('div')
+            contai.setAttribute('class','container')
+            contai.setAttribute('id',`div${num}`)
 
-            imgs.src = `https://image.tmdb.org/t/p/original${Imgslen.poster_path}`
+            contai.innerHTML = `<img src = https://image.tmdb.org/t/p/original${Imgslen.poster_path} >`
 
-            //imgs.style.width = '900px'
-            //imgs.style.height = '500px'
-
-            cont.appendChild(imgs)
-
+        
+            carro.appendChild(contai) 
         }))
         
+
+        idx = 0
+        const conta = document.querySelectorAll(".container")
+        console.log(conta)
+        const eventos=()=>{
+            
+
+            for(let i = 0; i < conta.length; i++ ){
+
+                //conta[i].style.display = 'none'
+                conta[i].style.transform = 'translateX(0px)'
+            }
+            idx++
+
+            if(idx > conta.length){
+
+                idx = 1
+            }
+
+            //conta[idx-1].style.display = 'block'
+            conta[idx-1].style.transform = `translateX(${300}px)`
+            console.log(idx-1)
+
+        }
+        setInterval(eventos,2000)
     })
 }
 

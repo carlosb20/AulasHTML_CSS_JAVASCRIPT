@@ -74,25 +74,35 @@ nav input{
 }
 /*  --------------------------------------------------------------------------------------------- */
 
+
+.bory{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: aqua;
+}
+
+.carrossel{
+
+    overflow: hidden;
+    width: 700px;
+    height: 500px;
+}
+
 .container{
 
     display: flex;
-    overflow: hidden;
-    width: 500px;
-    height: 500px;
+    transform: translateX(0);
+   
 }
 
-#foto{
+.container img{
 
-    width: 500px;
+    width: 700px;
     height: 500px;
 }
-
-
-
-
-
-
 
 
 
