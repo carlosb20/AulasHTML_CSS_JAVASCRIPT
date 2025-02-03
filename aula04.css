@@ -81,7 +81,7 @@ nav input{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: aqua;
+    
 }
 
 .carrossel{
@@ -94,7 +94,8 @@ nav input{
 .container{
 
     display: flex;
-    transform: translateX(0);
+    position: relative;
+    transition: transform 0.5s ease-in-out;
    
 }
 

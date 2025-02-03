@@ -51,15 +51,13 @@ const carrosselImagem=()=>{
         
 
         idx = 0
-        const conta = document.querySelectorAll(".container")
+        var conta = document.querySelectorAll(".container")
         console.log(conta)
         const eventos=()=>{
             
-
             for(let i = 0; i < conta.length; i++ ){
 
-                //conta[i].style.display = 'none'
-                conta[i].style.transform = 'translateX(0px)'
+                conta[i].style.display = 'none'
             }
             idx++
 
@@ -67,13 +65,9 @@ const carrosselImagem=()=>{
 
                 idx = 1
             }
-
-            //conta[idx-1].style.display = 'block'
-            conta[idx-1].style.transform = `translateX(${300}px)`
-            console.log(idx-1)
-
+            conta[idx-1].style.display = 'block'
         }
-        setInterval(eventos,2000)
+        setInterval(eventos,2500)
     })
 }
 
