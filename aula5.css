@@ -19,6 +19,13 @@ h1{
     text-shadow:-4px 0px 9px greenyellow;
 }
 
+.cent{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
 
 .caixadiv{
 

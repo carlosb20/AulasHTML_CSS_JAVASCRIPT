@@ -1,8 +1,6 @@
 
 
-
 const  key = '6d9a1e25dbcb17a0e630bab33da79bce'
-//const filmes = loadfilmes(`https://api.themoviedb.org/3/discover/movie?api_key=`)
 
 async function dadosAPI(params) {  
     try{
@@ -44,7 +42,7 @@ getdados.then(function(le){
             idx = 0
         }
         imgs.style.transform = `translateX(${-idx * 500}px)`
-        console.log(idx)
+       
     }
     setInterval(carrossell,2500)
 })
