@@ -17,19 +17,37 @@ class Matematica{
         return val
     }
     soma(){
-
-        console.log(this.simbolo())
-        console.log(this.numero())
+        
+        if(this.simbolo() == "+"){
+            const num1 = this.numero()
+            const num2 = this.numero()
+            console.log(`${num1} + ${num2}`)
+            return num1 + num2
+        }
+        if(this.simbolo() == "-"){
+            const num1 = this.numero()
+            const num2 = this.numero()
+            console.log(`${num1} - ${num2}`)
+            return num1 - num2
+        }else{
+            const num1 = this.numero()
+            const num2 = this.numero()
+            console.log(`${num1} x ${num2}`)
+            return num1 * num2
+        }
+        
+    
     }
 }
 
 
 const sim = new Matematica()
 
-sim.soma()
+
+const val = sim.soma()
 
 
-
+console.log(val)
 
 
 
