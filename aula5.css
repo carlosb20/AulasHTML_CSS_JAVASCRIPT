@@ -49,27 +49,54 @@ h1{
     height: 500px;
 }
 
+/* --------------------------------------------------------------------------------  */
+
+
 .caixajogo{
 
     width: 100%;
     height: 50vh;
-    background-color: azure;
+    padding: 20px;
+    background-color: rgba(240, 250, 255, 0.17);
+    border-radius: 5px;
+}
+
+.cente{
+
+    width: 100%;
+    display: block;
+    justify-items: center;
+    
 }
 
 .caixajogo span{
 
-    display: flex;
+    display:flex;
+    width: 500px;
     padding: 3px;
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(120deg,rgba(0, 128, 0, 0.412),rgba(255, 255, 0, 0.338),rgba(80, 255, 243, 0.239));
 }
 
+#spa1{
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+
+
 .contjo{
-    width: 100%;
+    width: 500px;
+    height: 30vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(120deg,green,yellow,coral);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: linear-gradient(120deg,rgba(0, 128, 0, 0.412),rgba(255, 255, 0, 0.338),rgba(80, 255, 243, 0.239));
 
 }
 .contjo input{
@@ -79,9 +106,19 @@ h1{
     text-align: center;
     padding: 10px;
     margin: 5px;
-    font-size: 20px;
+    font-size: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
 }
 
+.contjo button{
+
+    width: 80px;
+    height: 30px;
+    margin-top: 30px;
+
+}
 
 
 
