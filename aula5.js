@@ -29,8 +29,6 @@ getdados.then(function(le){
     const imgs = document.getElementById("imgss")
     const img = [...document.querySelectorAll("img")]
 
-    //console.log(img)
-    console.log(imgs)
 
     let idx = 0
 
@@ -47,8 +45,93 @@ getdados.then(function(le){
     setInterval(carrossell,2500)
 })
 
+/* ---------------------------------------------------------------------  */
+
+let valsoma = 0;
+let acerto = 1;
+let erro = 0;
+
+class Matematica{
+    
+    simbolo() {
+        let array = ['+','-','x']
+        let len = array.length
+        let num = Math.floor(Math.random()*len)
+        let simbo = array[num]
+        return simbo
+        
+    }
+    numero(){
+
+        let val = Math.floor(Math.random()*10)
+        return val
+    }
+    soma(){
+        
+        let ver = document.querySelector("#ver")
+        if(this.simbolo() == "+"){
+            const num1 = this.numero()
+            const num2 = this.numero()
+            ver.innerHTML = `${num1} + ${num2} = `
+            console.log(`${num1} + ${num2}`)
+            return num1 + num2
+        }
+        if(this.simbolo() == "-"){
+            const num1 = this.numero()
+            const num2 = this.numero()
+            ver.innerHTML = `${num1} - ${num2} = `
+            console.log(`${num1} - ${num2}`)
+            return num1 - num2
+        }else{
+            const num1 = this.numero()
+            const num2 = this.numero()
+            ver.innerHTML = `${num1} x ${num2} = `
+            console.log(`${num1} x ${num2}`)
+            return num1 * num2
+        }
+    }
+    rodajogo(){
+
+        valsoma = this.soma()
+    }
+}
 
 
+const sim = new Matematica()
+
+
+/* ---------------------------------------------------------------------  */
+
+const  bt = document.querySelector(".bt")
+const input = document.querySelector("#input")
+
+
+
+sim.rodajogo()
+
+bt.addEventListener("click",(ele)=>{
+    ele.preventDefault()
+
+    if(input.value != ''){
+
+        let numint = parseInt(input.value)
+
+        if(numint == valsoma){
+            const spa1 = document.querySelector("#spa1")
+            const incremento = acerto++
+            spa1.innerHTML = `Acerto = ${incremento}`
+            console.log('ok')   
+        }
+        
+    }else{
+        alert('ERRO ! Digita um Numero ')
+        
+    }
+    sim.rodajogo()
+    input.focus()
+    input.value = ''
+
+})
 
 
 
