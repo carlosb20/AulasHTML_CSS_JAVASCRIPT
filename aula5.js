@@ -49,7 +49,7 @@ getdados.then(function(le){
 
 let valsoma = 0;
 let acerto = 1;
-let erro = 0;
+let erro = 1;
 
 class Matematica{
     
@@ -121,7 +121,12 @@ bt.addEventListener("click",(ele)=>{
             const incremento = acerto++
             spa1.innerHTML = `Acerto = ${incremento}`
             console.log('ok')   
+        }else{
+            const spa2 = document.querySelector("#spa2")
+            let decremento = erro++
+            spa2.innerHTML = `Erros = ${decremento}`
         }
+
         
     }else{
         alert('ERRO ! Digita um Numero ')
