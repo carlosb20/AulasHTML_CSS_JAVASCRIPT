@@ -22,7 +22,7 @@ class BancoDados{
         });
     }
     coletadados(){
-        let cole = this.conexao()
+        
         this.criartabela()
 
         let stmt = cole.prepare("INSERT INTO usuarios (nombre, edad,cpf) VALUES (?, ?,?)");
